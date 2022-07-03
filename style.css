@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 32px;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --Dark-Blue: hsl(240, 38%, 20%);
+    --Grayish-Blue: hsl(240, 18%, 77%);
+}
+
+/* TYPOGRAPHY */
+
+main {
+    text-align: center;
+}
+
+.testimonial__paragraph {
+    font-size: .6rem;
+    color: var(--Dark-Blue);
+    font-weight: 300;
+    line-height: .8rem;
+}
+
+.testimonial__name {
+    font-weight: 700;
+    font-size: .5rem;
+
+}
+
+.testimonial__job {
+    font-weight: 400;
+    font-size: .5rem;
+    color: var(--Grayish-Blue);
+}
+
+/* LAYOUT */
+
+body {
+    background-image: url(./images/pattern-curve.svg), url(./images/pattern-quotes.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: left bottom, center 56%;
+    background-size: 80%, 15%;
+}
+
+main {
+    width: 100vw;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: .5rem;
+}
+
+.pictureDiv {
+    background: center center/ 95% url(./images/pattern-bg.svg) no-repeat;
+    position: relative;
+    height: 10rem;
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pictureDiv__picture {
+    margin-top: .15rem;
+    border-radius: .25rem;
+    height: 7.35rem;
+    width: 7.3rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+.tanyaQuote,
+.johnQuote {
+    position: absolute;
+    top: 55.5%;
+}
+
+.testimonial__paragraph {
+    padding: 0 .75rem .6rem .75rem;
+}
+
+.testimonial__name {
+    display: flex;
+    flex-direction: column;
+}
+
+.slider__input {
+    background-image: url(./images/icon-next.svg), url(./images/icon-prev.svg);
+    background-repeat: no-repeat;
+    background-position: 80% 50%, 20% 50%;
+    background-size: 13%;
+    position: absolute;
+    bottom: 7%;
+    right: 39%;
+    margin-left: 25%;
+    z-index: 3;
+    width: 2.25rem;
+    height: 1.25rem;
+    background-color: white;
+    border-radius: 1rem;
+    -webkit-appearance: none;
+}
+
+.slider__shadow {
+    content: '';
+    width: 4.5rem;
+    height: 1.25rem;
+    bottom: 17%;
+    right: 35%;
+    position: absolute;
+    background-color: black;
+    margin-left: 25%;
+    z-index: -2;
+    border-radius: 2rem;
+    box-shadow: -2px 22px 40px 10px var(--Grayish-Blue);
+}
+
+.slider__input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    background-color: transparent;
+}
+
+@media (min-width: 376px) {
+
+    /* TYPOGRAPHY */
+
+    main {
+        text-align: left;
+    }
+
+    .testimonial__paragraph {
+        font-size: 1rem;
+        line-height: 1.355rem;
+
+    }
+
+    .testimonial__name {
+        font-size: .6rem;
+    }
+
+    .testimonial__job {
+        font-size: .6rem;
+    }
+
+    /* LAYOUT */
+
+    body {
+        background-position: left bottom, 23.75% 23.5%;
+        background-size: 38%, 9%;
+    }
+
+    main {
+        display: block;
+    }
+
+    .pictureDiv {
+        background: center center/ 100% url(./images/pattern-bg.svg) no-repeat;
+        position: absolute;
+        right: 5%;
+        top: 0;
+        height: 18.35rem;
+        width: 18.35rem;
+        display: block;
+    }
+
+    .pictureDiv__picture {
+        margin-top: 0;
+        border-radius: .15rem;
+        height: 14.4rem;
+        width: 14.4rem;
+        position: inherit;
+        top: 12%;
+        right: 13%;
+    }
+
+    .tanyaQuote,
+    .johnQuote {
+        width: 50%;
+        top: 30%;
+        left: 14.75%;
+        z-index: 5;
+    }
+
+    .testimonial__paragraph {
+        padding: 0 1.45rem 1rem 0;
+    }
+
+    .testimonial__name {
+        display: block;
+        flex-direction: column;
+    }
+
+    .testimonial__job {
+        margin-left: .15rem;
+    }
+
+
+    .slider__input {
+        background-size: 11%;
+        bottom: 4.5%;
+        right: 66%;
+        width: 3.25rem;
+        height: 1.75rem;
+    }
+
+    .slider__shadow {
+        content: '';
+        width: 4.5rem;
+        height: 1.75rem;
+        bottom: 15%;
+        right: 59%;
+        position: absolute;
+        background-color: black;
+        margin-left: 25%;
+        z-index: -20;
+        border-radius: 2rem;
+        box-shadow: 0px 20px 40px 40px var(--Grayish-Blue);
+    }
+
+}
